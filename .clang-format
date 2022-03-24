@@ -1,0 +1,8 @@
+BasedOnStyle: LLVM
+AlignConsecutiveAssignments: true
+AlignTrailingComments: true
+AlwaysBreakTemplateDeclarations: true
+BinPackParameters: false
+BreakConstructorInitializersBeforeComma: true
+ColumnLimit: 0
+SortIncludes: false
