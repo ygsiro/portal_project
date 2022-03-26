@@ -25,10 +25,10 @@
 namespace portal::math {
 /**
  * @brief absolute
- * 
+ *
  * @tparam T type
  * @param[in] x value
- * @return The absolute value of x (i.e. |x|). 
+ * @return The absolute value of x (i.e. |x|).
  */
 template <typename T>
 [[nodiscard]] constexpr T absolute(T x) noexcept {
@@ -37,7 +37,7 @@ template <typename T>
 
 /**
  * @brief absolute
- * 
+ *
  * @tparam T type
  * @param[in] x value
  * @return The absolute value of x (i.e. |x|).
@@ -49,12 +49,12 @@ template <std::unsigned_integral T>
 
 /**
  * @brief Compares floating-point values.
- * 
+ *
  * @tparam T floating-point type
  * @param[in] x floating-point value
  * @param[in] y floating-point value
  * @param[in] tolerance tolerance
- * @return 
+ * @return
  * Return a negative value if x is less than y.
  * Return 0 if x and y are the same.
  * If x is greater than y, return a positive value.
@@ -69,11 +69,11 @@ template <std::floating_point T>
 
 /**
  * @brief Compares floating-point values.
- * 
+ *
  * @tparam T floating-point type
  * @param[in] x floating-point value
  * @param[in] y floating-point value
- * @return 
+ * @return
  * Return a negative value if x is less than y.
  * Return 0 if x and y are the same.
  * If x is greater than y, return a positive value.
@@ -89,7 +89,7 @@ template <std::floating_point T>
 
 /**
  * @brief x is zero?
- * 
+ *
  * @tparam T type
  * @param[in] x value
  * @return true x is 0.
@@ -102,7 +102,7 @@ template <typename T>
 
 /**
  * @brief x is zero?
- * 
+ *
  * @tparam T floating-point type
  * @param[in] x value
  * @param[in] tolerance tolerance
@@ -117,7 +117,7 @@ template <std::floating_point T>
 
 /**
  * @brief x is zero?
- * 
+ *
  * @tparam T floating-point type
  * @param[in] x value
  * @return true x is 0.
@@ -130,7 +130,7 @@ template <std::floating_point T>
 
 /**
  * @brief slow square root
- * 
+ *
  * @tparam T floating-point type
  * @param[in] scalar value
  * @return Returns the square root of scalar
@@ -153,7 +153,7 @@ template <std::floating_point T>
 
 /**
  * @brief slow sin
- * 
+ *
  * @tparam T floating-point type
  * @param[in] theta theta
  * @return Returns the sin of theta
@@ -180,7 +180,7 @@ template <std::floating_point T>
 
 /**
  * @brief slow cos
- * 
+ *
  * @tparam T floating-point type
  * @param[in] theta theta
  * @return Returns the cos of theta
@@ -196,7 +196,7 @@ template <std::floating_point T>
 
 /**
  * @brief slow tan
- * 
+ *
  * @tparam T floating-point type
  * @param[in] theta theta
  * @return Returns the tan of theta
@@ -208,6 +208,21 @@ template <std::floating_point T>
   } else {
     return std::tan(theta);
   }
+}
+
+/**
+ * @brief lerp
+ * 
+ * @tparam T type
+ * @tparam FT param
+ * @param[in] a value
+ * @param[in] b value
+ * @param[in] t parameter
+ * @return Linearly complement a and b with the parameter t.
+ */
+template <typename T, std::floating_point FT>
+[[nodiscard]] constexpr T lerp(const T &a, const T &b, FT t) {
+  return a + t * (b - a);
 }
 
 } // namespace portal::math
