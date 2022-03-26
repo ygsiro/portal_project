@@ -1,3 +1,13 @@
+/**
+ * @file color.hpp
+ * @author ygsiro (entoyukari@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-03-26
+ * 
+ * @copyright &copy; 2022 ygsiro
+ * 
+ */
 #ifndef PORTAL_DRAWING_COLOR_HPP
 #define PORTAL_DRAWING_COLOR_HPP
 

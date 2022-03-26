@@ -5,7 +5,7 @@
  * @version 0.1
  * @date 2022-03-24
  *
- * @copyright Copyright (c) 2022
+ * @copyright &copy; 2022 ygsiro
  *
  */
 #ifndef PORTAL_MATH_FS_VECTOR_HPP
