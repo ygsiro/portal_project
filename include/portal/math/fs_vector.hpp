@@ -12,6 +12,7 @@
 #define PORTAL_MATH_FS_VECTOR_HPP
 
 #include "math.hpp"
+#include "../random.hpp"
 
 namespace portal::math {
 /**
