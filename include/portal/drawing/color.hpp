@@ -95,6 +95,51 @@ struct basic_g {
   sample_type gray;      //!< @brief gray
 };
 
+/**
+ * @brief pixel color
+ *
+ * @tparam T type
+ */
+template <typename T>
+concept pixel_color = requires(T &a) {
+  typename T::sample_type;
+};
+
+/**
+ * @brief alpha color
+ * 
+ * @tparam T type
+ */
+template <typename T>
+concept alpha_color = requires(T &a) {
+  typename T::sample_type;
+  a.alpha;
+};
+
+/**
+ * @brief RGB color
+ * 
+ * @tparam T type
+ */
+template <typename T>
+concept true_color = requires(T &a) {
+  typename T::sample_type;
+  a.red;
+  a.green;
+  a.blue;
+};
+
+/**
+ * @brief Grayscale
+ * 
+ * @tparam T type
+ */
+template <typename T>
+concept gray_color = requires(T &a) {
+  typename T::sample_type;
+  a.gray;
+};
+
 } // namespace portal::drawing
 
 #endif // PORTAL_DRAWING_COLOR_HPP
