@@ -212,7 +212,7 @@ template <std::floating_point T>
 
 /**
  * @brief lerp
- * 
+ *
  * @tparam T type
  * @tparam FT param
  * @param[in] a value
@@ -223,6 +223,54 @@ template <std::floating_point T>
 template <typename T, std::floating_point FT>
 [[nodiscard]] constexpr T lerp(const T &a, const T &b, FT t) {
   return a + t * (b - a);
+}
+
+/**
+ * @brief pow2
+ *
+ * @tparam T type
+ * @param[in] x value
+ * @return constexpr T
+ */
+template <typename T>
+[[nodiscard]] constexpr T pow2(T x) noexcept {
+  return x * x;
+}
+
+/**
+ * @brief pow3
+ *
+ * @tparam T type
+ * @param[in] x value
+ * @return constexpr T
+ */
+template <typename T>
+[[nodiscard]] constexpr T pow3(T x) noexcept {
+  return x * x * x;
+}
+
+/**
+ * @brief pow4
+ *
+ * @tparam T type
+ * @param[in] x value
+ * @return constexpr T
+ */
+template <typename T>
+[[nodiscard]] constexpr T pow4(T x) noexcept {
+  return x * x * x * x;
+}
+
+/**
+ * @brief pow5
+ *
+ * @tparam T type
+ * @param[in] x value
+ * @return constexpr T
+ */
+template <typename T>
+[[nodiscard]] constexpr T pow5(T x) noexcept {
+  return x * x * x * x * x;
 }
 
 } // namespace portal::math
