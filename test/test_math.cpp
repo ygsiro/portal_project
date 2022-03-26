@@ -52,6 +52,4 @@ TEST(FSVec, Assign) {
 TEST(FSVec, At) {
   fs_vector<double, 3> a{1, 2, 3};
   EXPECT_THROW((void)a.at(a.size()), std::out_of_range);
-  std::cout << portal::random<double>() << std::endl;
-  std::cout << portal::random<double>() << std::endl;
 }
