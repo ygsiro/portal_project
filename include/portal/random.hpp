@@ -1,3 +1,13 @@
+/**
+ * @file random.hpp
+ * @author ygsiro (entoyukari@gmail.com)
+ * @brief random support
+ * @version 0.1
+ * @date 2022-03-26
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef PORTAL_RANDOM_HPP
 #define PORTAL_RANDOM_HPP
 
@@ -140,6 +150,14 @@ private:
   std::uniform_real_distribution<T> m_dist;
   Engine m_engine = {};
 };
+
+/**
+ * @brief random
+ * 
+ * @tparam T floating point type
+ */
+template<std::floating_point T = double>
+inline uniform_real_distribution<T> random;
 
 } // namespace portal
 
