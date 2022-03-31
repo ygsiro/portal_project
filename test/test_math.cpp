@@ -96,3 +96,9 @@ TEST(FSVec, UnaryMinus) {
   fs_vector<double, 3> a{1, 2, 3}, b{-1, -2, -3};
   EXPECT_EQ(-a, b);
 }
+
+TEST(FSVec, Swap) {
+  fs_vector<double, 3> a{1, 2, 3}, b{4, 5, 6}, res{a};
+  swap(a, b);
+  EXPECT_EQ(b, res);
+}

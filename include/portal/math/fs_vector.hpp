@@ -494,7 +494,7 @@ public:
    * @param[in] vec fs_vector
    * @return *this
    */
-  [[nodiscard]] constexpr fs_vector &swap(fs_vector &vec) noexcept {
+  constexpr fs_vector &swap(fs_vector &vec) noexcept {
     std::swap(m_elem, vec.m_elem);
     return *this;
   }
@@ -792,6 +792,19 @@ template <typename T>
       lhs[1] * rhs[2] - lhs[2] * rhs[1],
       lhs[2] * rhs[0] - lhs[0] * rhs[2],
       lhs[0] * rhs[1] - lhs[1] * rhs[0]};
+}
+
+/**
+ * @brief swap
+ * 
+ * @tparam T type
+ * @tparam N size
+ * @param[in] lhs vector 
+ * @param[in] rhs vector
+ */
+template<typename T, std::size_t N>
+constexpr void swap(fs_vector<T, N>& lhs, fs_vector<T,N>& rhs){
+  lhs.swap(rhs);
 }
 
 }; // namespace portal::math
