@@ -60,3 +60,8 @@ TEST(FSVec, Empty) {
   fs_vector<double, 3> b{1, 2, 3};
   EXPECT_FALSE(b.empty());
 }
+
+TEST(FSVect, Size) {
+  fs_vector<double, 3> a;
+  EXPECT_EQ(3U, a.size());
+}
