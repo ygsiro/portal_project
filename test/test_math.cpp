@@ -53,3 +53,10 @@ TEST(FSVec, At) {
   fs_vector<double, 3> a{1, 2, 3};
   EXPECT_THROW((void)a.at(a.size()), std::out_of_range);
 }
+
+TEST(FSVec, Empty) {
+  fs_vector<double, 0> a{};
+  EXPECT_TRUE(a.empty());
+  fs_vector<double, 3> b{1, 2, 3};
+  EXPECT_FALSE(b.empty());
+}
