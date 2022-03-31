@@ -65,3 +65,34 @@ TEST(FSVect, Size) {
   fs_vector<double, 3> a;
   EXPECT_EQ(3U, a.size());
 }
+
+TEST(FSVect, OpAdd) {
+  fs_vector<double, 3> a{1, 2, 3}, b{4, 5, 6}, res{5, 7, 9};
+  EXPECT_EQ(a + b, res);
+}
+
+TEST(FSVect, OpSub) {
+  fs_vector<double, 3> a{1, 2, 3}, b{4, 5, 6}, res{-3, -3, -3};
+  EXPECT_EQ(a - b, res);
+}
+
+TEST(FSVec, OpMul) {
+  fs_vector<double, 3> a{1, 2, 3}, res{3, 6, 9};
+  EXPECT_EQ(a * 3.0, res);
+  EXPECT_EQ(3.0 * a, res);
+}
+
+TEST(FSVec, OpDiv) {
+  fs_vector<double, 3> a{3, 6, 9}, res{1, 2, 3};
+  EXPECT_EQ(a / 3.0, res);
+}
+
+TEST(FSVec, UnaryPlus) {
+  fs_vector<double, 3> a{1, 2, 3}, b{1, 2, 3};
+  EXPECT_EQ(+a, b);
+}
+
+TEST(FSVec, UnaryMinus) {
+  fs_vector<double, 3> a{1, 2, 3}, b{-1, -2, -3};
+  EXPECT_EQ(-a, b);
+}
