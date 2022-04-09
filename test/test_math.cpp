@@ -102,3 +102,8 @@ TEST(FSVec, Swap) {
   swap(a, b);
   EXPECT_EQ(b, res);
 }
+
+TEST(FSVec, Dot) {
+  constexpr fs_vector<double, 3> a{1, 2, 3}, b{4, 5, 6};
+  EXPECT_DOUBLE_EQ(32, dot(a, b));
+}
